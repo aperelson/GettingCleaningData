@@ -47,3 +47,14 @@ doc <- htmlTreeParse(fileUrl, useInternalNodes = TRUE)
 scores <- xpathSApply(doc, "//li[@class='score']",xmlValue)
 teams <- xpathSApply(doc,"//li[@class='team-name']",xmlValue)
 
+##JSON
+install.packages("jsonlite")
+library(jsonlite)
+jsonData <- fromJSON("https://api.github.com/users/aperelson/repos")
+names(jsonData)
+jsonData$owner$login
+
+myjson <- toJSON(iris, pretty = TRUE)
+cat(myjson)
+
+
