@@ -1,3 +1,6 @@
+##Link to notes:
+https://www.coursera.org/learn/data-cleaning/discussions/forums/h8cjA78DEeWtFA5RrsHG3Q/threads/g7wrg25DEeasOQpiYXGJHw
+
 ##CSV
 if (!file.exists("data")) { 
     dir.create("data") 
@@ -16,8 +19,6 @@ library("xlsx") #Might need to install Java as well
 
 fileUrl <- "http://themightyp.iapetus.feralhosting.com/MyTestData.xlsx"
 download.file(fileUrl, destfile="./data/MyTestData.xlsx", mode="wb")
-install.packages("xlsx")
-library("xlsx")
 cameraData <- read.xlsx("./data/MyTestData.xlsx", sheetIndex = 1, header = TRUE)
 
 colIndex <- 2
